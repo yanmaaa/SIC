@@ -8,16 +8,16 @@ VARIABLE_LABEL_2 = "sensor_kanan"  # Put your second variable label here
 VARIABLE_LABEL_3 = "sensor_kiri"  # Put your second variable label here
 VARIABLE_LABEL_4 = "latitude"
 VARIABLE_LABEL_5 = "longitude"
-VARIABLE_LABEL_6 = "decision"
+# VARIABLE_LABEL_6 = "decision"
 
-def build_payload(value_1, value_2, value_3, value_4, value_5, value_6):
+def build_payload(value_1, value_2, value_3, value_4, value_5):
    
     payload = {VARIABLE_LABEL_1: value_1,
               VARIABLE_LABEL_2: value_2,
               VARIABLE_LABEL_3: value_3,
               VARIABLE_LABEL_4: value_4,
-              VARIABLE_LABEL_5: value_5,
-              VARIABLE_LABEL_6: value_6}
+              VARIABLE_LABEL_5: value_5}
+            #   VARIABLE_LABEL_6: value_6}
     return payload
 
 def post_request(payload):
@@ -53,5 +53,3 @@ def main():
     print("[INFO] Attemping to send data")
     post_request(payload)
     print("[INFO] finished")
-
-
